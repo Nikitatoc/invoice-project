@@ -26,6 +26,7 @@ services:
       - db
     volumes:
       - ./backend:/var/www/html
+      - /var/www/html/vendor
     networks:
       - invoice_network
 
