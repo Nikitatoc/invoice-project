@@ -23,8 +23,9 @@ DB_PASSWORD=password
 
 docker compose up -d --build
 
-Після першого запуску виконайте міграції:
+Виконайте генерацію ключа та міграції бази даних:
 
+docker compose exec backend php artisan key:generate
 docker compose exec backend php artisan migrate
 Доступ до застосунку
 Frontend: http://localhost:3000
